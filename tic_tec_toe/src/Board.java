@@ -13,7 +13,7 @@ class Board {
     }
 
     /**
-     * gvhvhvj
+     *
      * @param a number of box
      * @param b player
      * @return return true if move successful, false otherwise
