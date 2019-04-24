@@ -14,12 +14,16 @@ public class Main {
 
     public static void playWithComputer(){
         //
-        Game game = new Game();
+        Player playerX = new Player(1);
+        Player playerO = new RandomPlayer(2);
+        Game game = new Game(playerX, playerO);
         game.play();
     }
 
     public static void twoPlayer(){
-        Game game = new Game();
+        Player playerX = new Player(1);
+        Player playerO = new Player(2);
+        Game game = new Game(playerX, playerO);
         game.play();
     }
 }

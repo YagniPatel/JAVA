@@ -43,8 +43,18 @@ class Game {
 
             // handle if game is over
             if(board.isGameOver()) {
+                // todo check who wins
                 board.display();
                 System.out.println("\nGame is over.");
+                if(board.win() != 0){
+                    if(board.win() == 1)
+                        System.out.println("\n1 is won.");
+                    else
+                        System.out.println("\n2 is won.");
+                }
+                else
+                    System.out.println("\nNobody is won.");
+
                 break;
             }
         }

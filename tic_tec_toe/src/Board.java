@@ -37,9 +37,31 @@ class Board {
     }
 
     int win(){
+        int i;
+        char t='n';
 
+        if(c[0]==c[4] && c[0]==c[8] && c[0]!='_')
+            t=c[0];
 
-        return 0;
+        if(c[2]==c[4] && c[2]==c[6] && c[2]!='_')
+            t=c[2];
+
+        for (i=0; i<7; i+=3) {
+            if(c[i]==c[i+1] && c[i]==c[i+2] && c[i]!='_')
+                t=c[i];
+        }
+
+        for (i=0; i<3; i++) {
+            if(c[i]==c[i+3] && c[i]==c[i+6] && c[i]!='_')
+                t=c[i];
+        }
+
+        if(t=='x')
+            return 1;
+        else if(t=='o')
+            return 2;
+        else
+            return 0;
     }
 
     /**
@@ -48,6 +70,8 @@ class Board {
      */
     boolean isGameOver(){
         int i;
+        if (win() != 0 )
+            return true;
         for (i=0; i<9; i++)
             if(c[i]=='_')
                 return false;
