@@ -85,4 +85,9 @@ class Board {
     public void setPlayerX(Player playerX) {
         this.playerX = playerX;
     }
+
+    char[] copyBoard(){
+        char[] a = c;
+        return a;
+    }
 }

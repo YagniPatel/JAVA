@@ -5,7 +5,7 @@ class Game {
     private Board board;
     private Player playerX, playerO;
     Game(){
-        this(new Player(1), new Player(2));
+        this(new ConsolePlayer(1), new ConsolePlayer(2));
     }
 
     Game(Player playerX, Player playerO){
